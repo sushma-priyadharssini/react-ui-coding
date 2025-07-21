@@ -4,4 +4,6 @@
   align-items: center;
   justify-items: center;
   height: 100%;
+  padding: 200px;
+  gap: 30px;
 }
