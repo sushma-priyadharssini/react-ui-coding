@@ -4,6 +4,14 @@ import { SUCCESS_COMBINATION } from "./constants";
 import { useState, useEffect } from "react";
 import Layout from "@/libs/layout";
 
+// For N x N
+// export const winningCombos = [
+//   ...Array.from(new Array(size), (_, i) => Array.from(new Array(size), (_, j) => i * size + j)),
+//   ...Array.from(new Array(size), (_, i) => Array.from(new Array(size), (_, j) => j * size + i)),
+//   Array.from(new Array(size), (_, i) => i * size + i),
+//   Array.from(new Array(size), (_, i) => i * size + size - i - 1),
+// ];
+
 const TicTacToe = () => {
   const boardInitialValue = Object.fromEntries(
     Array.from(new Set(SUCCESS_COMBINATION.flat())).map((k) => [k, null])
