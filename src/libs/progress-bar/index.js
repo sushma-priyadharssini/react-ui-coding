@@ -1,1 +1,1 @@
-export { default } from "./progress-bar-one";
+export { default } from "./progress-bar";

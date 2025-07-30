@@ -6,5 +6,5 @@ export const ROUTES = [
     { name: 'Dice Roller', path: '/dice-roller' },
     { name: 'To Do List', path: '/to-do-list' },
     { name: 'Modal Dialog', path: '/modal-dialog' },
-
+    { name: 'Star Rating', path: '/star-rating' },
 ]

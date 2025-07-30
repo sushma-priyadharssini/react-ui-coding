@@ -61,7 +61,6 @@ const Dialog = (props) => {
 }
 
 const ModalDialog = () => {
-    const [title, setTitle] = useState('Modal Dialog');
     const [isOpen, setIsOpen] = useState(false);
 
     return (
@@ -71,7 +70,7 @@ const ModalDialog = () => {
 
                 {isOpen && <Dialog
                     isOpen={isOpen}
-                    title={title}
+                    title={'Modal Dialog'}
                     onClose={() => setIsOpen(false)} >
                     One morning, when Gregor Samsa woke from troubled
                     dreams, he found himself transformed in his bed into
