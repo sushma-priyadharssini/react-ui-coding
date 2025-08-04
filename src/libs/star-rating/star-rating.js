@@ -13,7 +13,6 @@ function StarRating({ starCount, rating, setRating }) {
             res[i] = count > 0 ? true : false;
             count--;
         }
-        console.log(res)
         setList(res);
     }
 
