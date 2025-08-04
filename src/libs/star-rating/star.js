@@ -1,8 +1,10 @@
+import styles from "./star.module.css"
+
 function Star({ isFilled = false }) {
     return (
         <svg
             xmlns="http://www.w3.org/2000/svg"
-            className={`star-icon ${isFilled ? "star-icon-filled" : ""}`}
+            className={`${styles.starIcon} ${isFilled ? styles.starIconFilled : ""}`}
             fill="none"
             viewBox="0 0 24 24"
             stroke="currentColor"
@@ -15,5 +17,7 @@ function Star({ isFilled = false }) {
         </svg>
     )
 }
+
+
 
 export default Star
