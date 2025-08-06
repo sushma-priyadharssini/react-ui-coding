@@ -65,18 +65,7 @@ const ModalOverlay = ({ title, onClose, children }) => {
 }
 
 const Dialog = (props) => {
-    return (
-        <>
-            {createPortal(
-                <ModalOverlay
-                    title={props.title}
-                    onClose={props.onClose}>
-                    {props.children}
-                </ModalOverlay>,
-                document.getElementById('overlays'))
-            }
-        </>
-    );
+    return createPortal(<ModalOverlay {...props} />, document.getElementById('overlays'))
 }
 
 const ModalDialog = () => {
@@ -88,7 +77,6 @@ const ModalDialog = () => {
                 <button onClick={() => setIsOpen(true)}>Open Modal</button>
 
                 {isOpen && <Dialog
-                    isOpen={isOpen}
                     title={'Modal Dialog'}
                     onClose={() => setIsOpen(false)} >
                     One morning, when Gregor Samsa woke from troubled
