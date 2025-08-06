@@ -1,12 +1,12 @@
 "use client";
-import { useState, useId, useEffect } from 'react';
+import { useState, useId, useEffect, useRef } from 'react';
 import { createPortal } from "react-dom";
 import Layout from "@/libs/layout"
 import styles from "./modal.module.css"
 
-function Backdrop({ children, onClose }) {
+function Backdrop({ children }) {
     return (
-        <div className={styles.backdrop} onClick={onClose}>
+        <div className={styles.backdrop}>
             {children}
         </div>
     )
@@ -15,6 +15,7 @@ function Backdrop({ children, onClose }) {
 const ModalOverlay = ({ title, onClose, children }) => {
     const titleId = useId();
     const contentId = useId();
+    const dialogRef = useRef(null);
 
     useEffect(() => {
         function onKeyDownFunction(ev) {
@@ -23,8 +24,25 @@ const ModalOverlay = ({ title, onClose, children }) => {
             }
         }
 
+        function onClickOutside(ev) {
+            if (
+                ev.target instanceof Node &&
+                dialogRef.current != null &&
+                !dialogRef.current?.contains(ev.target)
+            ) {
+                onClose()
+            }
+        }
+
         document.addEventListener("keydown", onKeyDownFunction)
-        return () => document.removeEventListener("keydown", onKeyDownFunction)
+        document.addEventListener('mousedown', onClickOutside);
+        document.addEventListener('touchstart', onClickOutside);
+
+        return () => {
+            document.removeEventListener("keydown", onKeyDownFunction)
+            document.removeEventListener('mousedown', onClickOutside);
+            document.removeEventListener('touchstart', onClickOutside);
+        }
     }, [])
 
     return (
@@ -32,6 +50,7 @@ const ModalOverlay = ({ title, onClose, children }) => {
             <div
                 className={styles.modal}
                 role="dialog"
+                ref={dialogRef}
                 aria-modal="true"
                 aria-labelledby={titleId}
                 aria-describedby={contentId}>
