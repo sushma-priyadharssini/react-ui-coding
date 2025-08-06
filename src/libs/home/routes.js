@@ -7,4 +7,5 @@ export const ROUTES = [
     { name: 'To Do List', path: '/to-do-list' },
     { name: 'Modal Dialog', path: '/modal-dialog' },
     { name: 'Star Rating', path: '/star-rating' },
+    { name: 'Grid Lights', path: '/grid-lights' },
 ]
