@@ -8,4 +8,5 @@ export const ROUTES = [
     { name: 'Modal Dialog', path: '/modal-dialog' },
     { name: 'Star Rating', path: '/star-rating' },
     { name: 'Grid Lights', path: '/grid-lights' },
+    { name: 'Like Button', path: '/like-button' },
 ]

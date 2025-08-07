@@ -1,0 +1,29 @@
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  border-radius: 15px;
+  width: 80px;
+  height: 30px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.default {
+  border-color: 1px solid #888;
+  background-color: white;
+  color: #888;
+}
+
+.liked {
+  border-color: 1px solid #f00;
+  background-color: #f00;
+  color: #fff;
+}
+
+.button:hover {
+  border-color: #f00;
+  color: #f00;
+  background-color: white;
+}
