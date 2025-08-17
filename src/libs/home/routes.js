@@ -9,4 +9,5 @@ export const ROUTES = [
     { name: 'Star Rating', path: '/star-rating' },
     { name: 'Grid Lights', path: '/grid-lights' },
     { name: 'Like Button', path: '/like-button' },
+    { name: 'Accordion', path: '/accordion' },
 ]
