@@ -6,9 +6,9 @@ function ProgressBar() {
     const [startTransition, setStartTransition] = useState(false);
 
     useEffect(() => {
-        if (startTransition) {
-            return;
-        }
+        // if (startTransition) {
+        //     return;
+        // }
         setStartTransition(true)
     })
 

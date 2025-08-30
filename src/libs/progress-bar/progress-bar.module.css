@@ -35,16 +35,17 @@
 .progressTransition {
   background-color: green;
   height: 100%;
+  /* transform: scaleX(0);
+  transform-origin: left;
+  transition-duration: 2000ms; */
+  /* can also consider width */
   width: 0px;
-  /* transform: scaleX(0); */
-  /* transform-origin: left; */
-  /* transition-duration: 2000ms; */
-  transition-property: width; /* can also consider width */
-  transition-timing-function: linear;
+  /* transition-property: width; */
+  /* transition-timing-function: linear; */
   transition: width 2s;
 }
 
 .progressFilled {
-  /* transform: scaleX(1); */
-   width: 100%;
+  /* transform: scaleX(40%); */
+  width: 30%;
 }
