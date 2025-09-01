@@ -4,7 +4,7 @@ import { FaGithub } from "react-icons/fa";
 export const Card = ({ title, description, githubLink, deployLink }) => {
     return (
         <div className={styles.card}>
-            {/* Title */}
+
             <div className={styles.cardHeader}>
                 <h2 className={styles.cardTitle}>{title}</h2>
                 <a
@@ -17,8 +17,6 @@ export const Card = ({ title, description, githubLink, deployLink }) => {
                 </a>
             </div>
 
-
-            {/* Description */}
             <p className={styles.cardDescription}>{description}</p>
 
             {/* Tags */}
@@ -33,7 +31,6 @@ export const Card = ({ title, description, githubLink, deployLink }) => {
                 ))}
             </div> */}
 
-            {/* Link Button */}
             {deployLink && (
                 <a
                     href={deployLink}
