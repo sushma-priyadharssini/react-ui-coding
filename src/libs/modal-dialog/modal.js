@@ -43,7 +43,7 @@ const ModalOverlay = ({ title, onClose, children }) => {
             document.removeEventListener('mousedown', onClickOutside);
             document.removeEventListener('touchstart', onClickOutside);
         }
-    }, [])
+    }, [onClose])
 
     return (
         <Backdrop onClose={onClose}>

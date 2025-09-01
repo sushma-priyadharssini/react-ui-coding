@@ -10,7 +10,7 @@ function ProgressBar() {
         //     return;
         // }
         setStartTransition(true)
-    })
+    }, [])
 
     return (
         <div className={`${styles.progressTransition} ${startTransition && styles.progressFilled}`}>

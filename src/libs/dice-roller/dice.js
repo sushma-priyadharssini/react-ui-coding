@@ -6,8 +6,8 @@ import { DICE_FACE_DOT_POSITIONS } from "./constants"
 
 const Dice = ({ number }) => {
     return <div className={styles.dice}>
-        {DICE_FACE_DOT_POSITIONS[number].map(dotStyle => {
-            return <div className={`${styles.circle} ${styles[dotStyle]}`}></div>
+        {DICE_FACE_DOT_POSITIONS[number].map((dotStyle, idx) => {
+            return <div key={idx} className={`${styles.circle} ${styles[dotStyle]}`}></div>
         })}
     </div>
 }
