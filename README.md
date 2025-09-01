@@ -1,4 +1,29 @@
+
+
+## 🚀 React Nuggets
+
+A curated collection of small, functional applications - each crafted to explore a concept, pattern, or idea in a hands-on way to learn and apply core concepts in React, JavaScript, APIs, and UI design.
+
+Each app is self-contained yet designed to teach something meaningful — from working with APIs, managing state, handling user input, to building reusable UI components.
+
+While minimal in size, these apps are packed with practical knowledge, making them great references for learning, experimenting, and building confidence with System design in React. 
+
+## 🛠️ Tech Stack
+
+Frontend: React, HTML5, CSS3, Tailwind (optional)
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+
+
+## 📖 Learning Goals
+
+- Learn React basics (state, props, hooks).
+
+- Practice real-world problem solving with small apps.
+
+- Improve UI building skills with responsive layouts.
+
+- Explore component reusability and clean coding practices.
 
 ## Getting Started
 
