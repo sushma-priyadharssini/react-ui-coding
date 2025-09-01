@@ -11,8 +11,8 @@
   align-items: center;
   justify-items: center;
   min-height: 100svh;
-  padding: 80px;
-  gap: 64px;
+  padding: 40px;
+
   font-family: var(--font-geist-sans);
 }
 
@@ -30,7 +30,7 @@
 .main {
   display: flex;
   flex-direction: column;
-  gap: 32px;
+
   grid-row-start: 2;
 }
 
