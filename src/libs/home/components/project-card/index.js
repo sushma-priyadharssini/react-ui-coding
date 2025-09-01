@@ -1,5 +1,4 @@
 import styles from "./project-card.module.css"
-import { FaGithub } from "react-icons/fa";
 
 export const Card = ({ title, description, githubLink, deployLink }) => {
     return (
@@ -13,7 +12,7 @@ export const Card = ({ title, description, githubLink, deployLink }) => {
                     rel="noopener noreferrer"
                     className={styles.githubLink}
                 >
-                    <FaGithub size={20} />
+                    la
                 </a>
             </div>
 
