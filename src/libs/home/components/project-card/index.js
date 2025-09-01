@@ -19,7 +19,6 @@ export const Card = ({ title, description, githubLink, deployLink }) => {
 
             <p className={styles.cardDescription}>{description}</p>
 
-            {/* Tags */}
             {/* <div className="flex flex-wrap gap-2 mb-4">
                 {tags.map((tag, index) => (
                     <span
