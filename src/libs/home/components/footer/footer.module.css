@@ -31,7 +31,7 @@
 }
 
 .footer {
-  padding-bottom: 24px;
+  padding-bottom: 18px;
   width: 100%;
   position: fixed;
   bottom: 0;
@@ -51,7 +51,7 @@
   .footer {
     width: calc(100% - 80px);
     left: 40px;
-    padding-bottom: 50px;
+    padding-bottom: 24px;
   }
 }
 
@@ -60,6 +60,6 @@
   .footer {
     width: calc(100% - 80px);
     left: 40px;
-    padding-bottom: 50px;
+    padding-bottom: 24px;
   }
 }

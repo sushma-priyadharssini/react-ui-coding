@@ -12,7 +12,7 @@ export const ProjectList = () => {
     const endIndex = Math.min(startIndex + ITEMS_PER_PAGE, ROUTES.length);
     const filteredPages = ROUTES.slice(startIndex, endIndex);
 
-    return <nav>
+    return <nav className={styles.projectList}>
         <ul className={styles.gridContainer}>
             {filteredPages.map((app) => {
                 const { name, description, path, github } = app;
