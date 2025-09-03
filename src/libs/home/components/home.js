@@ -1,18 +1,24 @@
 "use client";
 
 import { ProjectList } from "./project-list"
-import React from 'react'
 import styles from "../home.module.css"
-
-
+import Footer from "./footer"
+import { AppContextProvider } from "./context/app-context"
 
 const Home = () => {
-    return <div>
-        <div className={styles.header}>
-            <h1 className={styles.pageHeading}>React Nuggets</h1>
+    return <AppContextProvider>
+        <div className={styles.home}>
+            <div className={styles.header}>
+                <h1 className={styles.pageHeading}>React Nuggets</h1>
+            </div>
+
+            <div className={styles.homeContent}>
+                <ProjectList />
+            </div>
+
+            <Footer />
         </div>
-       
-        <ProjectList />
-    </div>
+
+    </AppContextProvider>
 }
 export default Home

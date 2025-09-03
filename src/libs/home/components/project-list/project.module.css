@@ -2,6 +2,7 @@
   display: grid;
   grid-template-columns: 1fr; /* default: 1 item per row */
   gap: 4rem; /* Tailwind's gap-6 = 1.5rem */
+  /* margin-bottom: 24px; */
 }
 
 /* sm:grid-cols-2 (≥640px) */
@@ -16,4 +17,11 @@
   .gridContainer {
     grid-template-columns: repeat(3, 1fr);
   }
+}
+
+.homeContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
 }

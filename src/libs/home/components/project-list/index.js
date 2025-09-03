@@ -1,15 +1,20 @@
 "use client";
 import { ROUTES } from "../../routes"
-// import Link from 'next/link'
 import { Card } from "../project-card"
 import styles from "./project.module.css"
+import { ITEMS_PER_PAGE } from "../constants";
+import { useAppContext } from "../context/app-context";
 
 
 export const ProjectList = () => {
-    {/* <Link href={link.path} className="nav-link">{link.name}</Link> */ }
+    const { pagination: { page } } = useAppContext();
+    const startIndex = (page.currPage - 1) * ITEMS_PER_PAGE;
+    const endIndex = Math.min(startIndex + ITEMS_PER_PAGE, ROUTES.length);
+    const filteredPages = ROUTES.slice(startIndex, endIndex);
+
     return <nav>
         <ul className={styles.gridContainer}>
-            {ROUTES.map((app) => {
+            {filteredPages.map((app) => {
                 const { name, description, path, github } = app;
                 return <Card
                     key={path}
