@@ -1,0 +1,35 @@
+.table {
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+.tableData,
+.tableHeader {
+  padding: 4px;
+  border-bottom: 1px solid #ddd;
+  text-align: start;
+  cursor: pointer;
+}
+
+.tableHeader {
+  vertical-align: top;
+}
+
+.tableHeader .button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.pagination {
+  display: flex;
+  font-size: 14px;
+  gap: 12px;
+}
+
+.pages {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}

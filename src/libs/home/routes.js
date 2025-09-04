@@ -10,4 +10,5 @@ export const ROUTES = [
     { name: 'Grid Lights', path: '/grid-lights', description: "Grid of lights where the lights deactivate in the reverse order they were activated", github: "https://github.com/sushma-priyadharssini/react-ui-coding/blob/main/src/libs/grid-lights/grid-lights.js" },
     { name: 'Like Button', path: '/like-button', description: "A clickable button that allows users to express appreciation with a single tap.", github: "https://github.com/sushma-priyadharssini/react-ui-coding/blob/main/src/libs/like-button/like-button.js" },
     { name: 'Accordion', path: '/accordion', description: "A collapsible UI component that expands to reveal hidden content and contracts to save space.", github: "https://github.com/sushma-priyadharssini/react-ui-coding/blob/main/src/libs/accordion/accordion.js" },
+    { name: 'Data Table', path: '/data-table', description: "A component that displays data in a tabular format, allowing for easy comparison and analysis.", github: "https://github.com/sushma-priyadharssini/react-ui-coding/blob/main/src/libs/data-table/data-table.js" },
 ]
