@@ -1,5 +1,4 @@
 "use client";
-import Layout from "@/libs/layout";
 import { useState, useEffect, useCallback } from 'react';
 import Star from "./star"
 
@@ -47,12 +46,9 @@ function StarRating({ starCount, rating, setRating }) {
 
 export default function StarRatingComponent() {
     const [rating, setRating] = useState(2);
-    return (
-        <Layout>
-            <StarRating
-                starCount={5}
-                rating={rating}
-                setRating={setRating} />
-        </Layout>
+    return (<StarRating
+        starCount={5}
+        rating={rating}
+        setRating={setRating} />
     );
 }

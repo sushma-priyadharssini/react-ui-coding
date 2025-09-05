@@ -1,7 +1,7 @@
 import { FiArrowRight, FiArrowLeft } from "react-icons/fi"; // Example: Arrow icon
 import styles from "./footer.module.css";
 import { ROUTES } from "../../routes";
-import { useAppContext } from "../context/app-context";
+import { useAppContext } from "@/libs/app-context";
 import { useEffect } from "react";
 import { ITEMS_PER_PAGE } from "../constants";
 

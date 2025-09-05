@@ -2,7 +2,6 @@
 import { box } from "./board.module.css";
 import { SUCCESS_COMBINATION } from "./constants";
 import { useState, useEffect } from "react";
-import Layout from "@/libs/layout";
 
 // For N x N
 // export const winningCombos = [
@@ -50,7 +49,7 @@ const TicTacToe = () => {
   };
 
   return (
-    <Layout>
+    <>
       {winner && <span>{`${winner} has won`}</span>}
       <table>
         <tbody>
@@ -75,7 +74,7 @@ const TicTacToe = () => {
         </tbody>
       </table>
       <button onClick={onReset}>Reset</button>
-    </Layout>
+    </>
   );
 };
 

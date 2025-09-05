@@ -1,6 +1,5 @@
 "use client";
 import { useState } from 'react'
-import Layout from "@/libs/layout"
 import { users } from './constants';
 import styles from './table.module.css'
 
@@ -62,7 +61,7 @@ export default function DataTable() {
     }
 
     return (
-        <Layout>
+        <>
             <table className={styles.table}>
                 <thead>
                     <tr>
@@ -118,6 +117,6 @@ export default function DataTable() {
                     </button>
                 </div>
             </div>
-        </Layout>
+        </>
     );
 }

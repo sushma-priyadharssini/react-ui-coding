@@ -1,7 +1,6 @@
 "use client";
 import { useState, useId, useEffect, useRef } from 'react';
 import { createPortal } from "react-dom";
-import Layout from "@/libs/layout"
 import styles from "./modal.module.css"
 
 function Backdrop({ children }) {
@@ -72,26 +71,22 @@ const ModalDialog = () => {
     const [isOpen, setIsOpen] = useState(false);
 
     return (
-        <>
-            <Layout>
-                <button onClick={() => setIsOpen(true)}>Open Modal</button>
-
-                {isOpen && <Dialog
-                    title={'Modal Dialog'}
-                    onClose={() => setIsOpen(false)} >
-                    One morning, when Gregor Samsa woke from troubled
-                    dreams, he found himself transformed in his bed into
-                    a horrible vermin. He lay on his armour-like back,
-                    and if he lifted his head a little he could see his
-                    brown belly, slightly domed and divided by arches
-                    into stiff sections.
-                </Dialog>
-                }
-
-            </Layout>
+        <div>
+            <button onClick={() => setIsOpen(true)}>Open Modal</button>
+            {isOpen && <Dialog
+                title={'Modal Dialog'}
+                onClose={() => setIsOpen(false)} >
+                One morning, when Gregor Samsa woke from troubled
+                dreams, he found himself transformed in his bed into
+                a horrible vermin. He lay on his armour-like back,
+                and if he lifted his head a little he could see his
+                brown belly, slightly domed and divided by arches
+                into stiff sections.
+            </Dialog>
+            }
             <div id="overlays"></div>
             {/* can be anywhere in the page */}
-        </>
+        </div>
     );
 }
 

@@ -1,6 +1,5 @@
 "use client";
 import { useState } from 'react';
-import Layout from "@/libs/layout"
 import styles from "./like.module.css"
 import { HeartIcon, SpinnerIcon } from "./icons"
 
@@ -38,13 +37,13 @@ const LikeButton = () => {
 
 
     return (
-        <Layout>
+        <div>
             <button className={`${styles.button} ${liked ? styles.liked : styles.default}`} onClick={likeHandler}>
                 {isLoading ? <SpinnerIcon /> : <HeartIcon />}
                 <span>{"Like"}</span>
             </button>
             {error && <div>{error}</div>}
-        </Layout>
+        </div>
     );
 }
 

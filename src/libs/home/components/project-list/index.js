@@ -3,7 +3,7 @@ import { ROUTES } from "../../routes"
 import { Card } from "../project-card"
 import styles from "./project.module.css"
 import { ITEMS_PER_PAGE } from "../constants";
-import { useAppContext } from "../context/app-context";
+import { useAppContext } from "@/libs/app-context";
 
 
 export const ProjectList = () => {

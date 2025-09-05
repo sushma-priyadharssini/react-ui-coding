@@ -1,6 +1,5 @@
 "use client";
 import { useEffect, useState } from 'react'
-import Layout from "@/libs/layout"
 import styles from "./clock.module.css"
 
 function Hand({ angle, width = 1, height = 1 }) {
@@ -39,14 +38,11 @@ const AnalogClock = () => {
     const minutesAngle = minutes / 60 * 360;
     const secondsAngle = seconds / 60 * 360;
 
-    return <Layout>
-        <div className={styles.clock}>
-            <Hand height={0.5} width={5} angle={hoursAngle} />
-            <Hand height={0.8} width={3} angle={minutesAngle} />
-            <Hand height={0.8} width={1} angle={secondsAngle} />
-        </div>
-    </Layout>
-
+    return <div className={styles.clock}>
+        <Hand height={0.5} width={5} angle={hoursAngle} />
+        <Hand height={0.8} width={3} angle={minutesAngle} />
+        <Hand height={0.8} width={1} angle={secondsAngle} />
+    </div>
 }
 
 export default AnalogClock;

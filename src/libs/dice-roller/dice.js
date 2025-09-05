@@ -1,6 +1,5 @@
 "use client";
-import { useEffect, useState } from 'react'
-import Layout from "@/libs/layout"
+import { useState } from 'react'
 import styles from "./dice.module.css"
 import { DICE_FACE_DOT_POSITIONS } from "./constants"
 
@@ -26,7 +25,7 @@ const DiceRoller = () => {
         setRes(randomNumberList);
     }
 
-    return <Layout>
+    return <div>
         <div>
             <form onSubmit={rollHandler} className={styles.inputContainer}>
                 <input
@@ -42,7 +41,7 @@ const DiceRoller = () => {
                 return <Dice key={idx} number={r} />
             })}
         </div>
-    </Layout>
+    </div>
 
 }
 

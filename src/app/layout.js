@@ -1,4 +1,5 @@
 import "./globals.css";
+import { AppContextProvider } from "@/libs/app-context";
 
 export const metadata = {
   title: "React Nuggets",
@@ -6,10 +7,13 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
+
   return (
     <html lang="en">
       <body>
-        {children}
+        <AppContextProvider>
+          {children}
+        </AppContextProvider>
       </body>
     </html>
   );

@@ -1,6 +1,5 @@
 "use client";
 import { useState, useEffect } from 'react';
-import Layout from "@/libs/layout"
 import styles from "./grid.module.css"
 
 
@@ -33,26 +32,24 @@ const GridLights = () => {
     }
 
 
-    return <Layout>
-        <table className={styles.grid}>
-            <tbody>
-                {Array.from({ length: 3 }, () => 0).map((_, rowIndex) => (
-                    <tr key={rowIndex} onClick={gridClickHandler}>
-                        {Array.from({ length: 3 }, () => 0).map((_, colIndex) => {
-                            const cellId = `r${rowIndex}c${colIndex}`;
-                            const isMidCell = cellId === 'r1c1';
-                            return (
-                                <td key={cellId} id={cellId}
-                                    className={`${isMidCell ? "" : styles.light} ${lights.includes(cellId) ? styles.lightOn : styles.lightOff}`}>
-                                </td>
+    return <table className={styles.grid}>
+        <tbody>
+            {Array.from({ length: 3 }, () => 0).map((_, rowIndex) => (
+                <tr key={rowIndex} onClick={gridClickHandler}>
+                    {Array.from({ length: 3 }, () => 0).map((_, colIndex) => {
+                        const cellId = `r${rowIndex}c${colIndex}`;
+                        const isMidCell = cellId === 'r1c1';
+                        return (
+                            <td key={cellId} id={cellId}
+                                className={`${isMidCell ? "" : styles.light} ${lights.includes(cellId) ? styles.lightOn : styles.lightOff}`}>
+                            </td>
 
-                            );
-                        })}
-                    </tr>
-                ))}
-            </tbody>
-        </table>
-    </Layout>
+                        );
+                    })}
+                </tr>
+            ))}
+        </tbody>
+    </table>
 }
 
 export default GridLights

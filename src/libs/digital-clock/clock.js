@@ -1,6 +1,5 @@
 "use client";
 import { useEffect, useState } from 'react'
-import Layout from "@/libs/layout";
 
 const useTimeGenerator = () => {
     const [time, setTime] = useState(new Date());
@@ -27,11 +26,9 @@ const AnalogClock = () => {
 
     const displayTime = `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`
 
-    return <Layout>
-        <div>
-            {displayTime}
-        </div>
-    </Layout>
+    return <div>
+        {displayTime}
+    </div>
 
 }
 

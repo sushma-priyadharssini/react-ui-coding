@@ -1,7 +1,12 @@
 import styles from "./project-card.module.css"
 import { FaGithub } from "react-icons/fa";
+import { useAppContext } from "@/libs/app-context";
+import { useRouter } from "next/navigation";
 
 export const Card = ({ title, description, githubLink, deployLink }) => {
+    const router = useRouter();
+    const { dispatchers: { setCurrentProject } } = useAppContext();
+
     return (
         <div className={styles.card}>
 
@@ -19,26 +24,16 @@ export const Card = ({ title, description, githubLink, deployLink }) => {
 
             <p className={styles.cardDescription}>{description}</p>
 
-            {/* <div className="flex flex-wrap gap-2 mb-4">
-                {tags.map((tag, index) => (
-                    <span
-                        key={index}
-                        className="text-xs px-3 py-1 bg-blue-100 text-blue-600 rounded-full"
-                    >
-                        {tag}
-                    </span>
-                ))}
-            </div> */}
-
             {deployLink && (
-                <a
-                    href={deployLink}
-                    target="_blank"
-                    rel="noopener noreferrer"
+                <button
                     className={styles.cardButton}
+                    onClick={() => {
+                        router.push(deployLink);
+                        setCurrentProject(title);
+                    }}
                 >
                     View Project
-                </a>
+                </button>
             )}
         </div>
     );

@@ -1,6 +1,5 @@
 "use client";
 import { useState } from 'react';
-import Layout from "@/libs/layout"
 import styles from "./todo.module.css"
 
 const ToDoList = () => {
@@ -18,7 +17,7 @@ const ToDoList = () => {
     }
 
     return (
-        <Layout>
+        <>
             <h1>Todo List</h1>
             <div className={styles.inputContainer}>
                 <input
@@ -42,7 +41,7 @@ const ToDoList = () => {
                 }
                 )}
             </ul>
-        </Layout>
+        </>
     );
 }
 
