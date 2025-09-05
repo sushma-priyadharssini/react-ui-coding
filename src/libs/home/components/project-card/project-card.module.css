@@ -68,6 +68,7 @@
   transition: background-color 0.3s ease;
   height: 2rem;
   border: none;
+  cursor: pointer;
 }
 
 .cardButton:hover {
