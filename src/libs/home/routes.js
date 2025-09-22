@@ -11,4 +11,6 @@ export const ROUTES = [
     { name: 'Like Button', path: '/projects/like-button', description: "A clickable button that allows users to express appreciation with a single tap.", github: "https://github.com/sushma-priyadharssini/react-ui-coding/blob/main/src/libs/like-button/like-button.js" },
     { name: 'Accordion', path: '/projects/accordion', description: "A collapsible UI component that expands to reveal hidden content and contracts to save space.", github: "https://github.com/sushma-priyadharssini/react-ui-coding/blob/main/src/libs/accordion/accordion.js" },
     { name: 'Data Table', path: '/projects/data-table', description: "A component that displays data in a tabular format, allowing for easy comparison and analysis.", github: "https://github.com/sushma-priyadharssini/react-ui-coding/blob/main/src/libs/data-table/data-table.js" },
+    { name: 'Poll Widget', path: '/projects/poll-widget', description: "An interactive component that lets users cast votes on a question and view real-time poll results.", github: "https://github.com/sushma-priyadharssini/react-ui-coding/blob/main/src/libs/poll-widget/poll-widget.js" },
+
 ]

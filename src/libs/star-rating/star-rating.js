@@ -21,7 +21,7 @@ function StarRating({ starCount, rating, setRating }) {
 
     useEffect(() => {
         updateStars(hoverIndex ? hoverIndex : rating);
-    }, [hoverIndex, updateStars])
+    }, [hoverIndex, updateStars, rating])
 
 
     return (
