@@ -1,1 +1,1 @@
-export { default } from "./poll-widget";
+export { default } from "./components/poll-widget";
