@@ -2,7 +2,7 @@
 import { useReducer, useContext, createContext } from "react";
 
 // 1. Create Context
-const PollContext = createContext();
+const PollContext = createContext(null);
 
 
 // 2. Define reducer

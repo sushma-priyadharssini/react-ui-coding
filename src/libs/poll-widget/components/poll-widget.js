@@ -6,17 +6,16 @@ import PollOption from "./poll-option"
 import { POLLS } from "../poll-data"
 
 const PollWidget = () => {
-    let [showVotes, setShowVotes] = useState(false);
+    let [showVotes, setShowVotes] = useState(false)
     const { state: { pollData, selectedOptions }, dispatchers: { setPollData, setSelectedOptions } } = usePollContext()
 
 
     useEffect(() => {
         // ✅ Only run on client
-        const mockFetch = () =>
-            Promise.resolve({
-                ok: true,
-                json: () => Promise.resolve(POLLS),
-            });
+        const mockFetch = () => Promise.resolve({
+            ok: true,
+            json: () => Promise.resolve(POLLS),
+        });
 
         // Override fetch temporarily
         const originalFetch = global.fetch;

@@ -18,8 +18,6 @@ const PollOption = ({
 
     } = usePollContext();
 
-    console.log("selectedOptions", selectedOptions)
-
     return <div className={styles.pollOption}>
         <label className={styles.pollLabel}>{label}</label>
         <div className={styles.pollItem}>

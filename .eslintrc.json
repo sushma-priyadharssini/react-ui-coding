@@ -1,0 +1,56 @@
+{
+  "extends": [
+    "next/core-web-vitals",
+    "eslint:recommended",
+    "plugin:import/recommended",
+    "plugin:prettier/recommended",
+    "plugin:react/recommended"
+  ],
+  "ignorePatterns": ["**/.next/**", "*/ssr/*"],
+  "plugins": [
+    "@nrwl/nx",
+    "rulesdir",
+    "react",
+    "eslint-comments",
+    "unused-imports",
+    "react-hooks"
+  ],
+  "rules": {
+    "max-len": "off",
+    "no-unused-vars": "off", // handled by plugin
+    "unused-imports/no-unused-imports": "error",
+    "import/order": [
+      "warn",
+      {
+        "groups": [
+          ["builtin", "external"],
+          "internal",
+          ["parent", "sibling", "index"]
+        ],
+        "alphabetize": { "order": "asc", "caseInsensitive": true }
+      }
+    ],
+    "unused-imports/no-unused-vars": [
+      "warn",
+      {
+        "vars": "all",
+        "varsIgnorePattern": "^_",
+        "args": "after-used",
+        "argsIgnorePattern": "^_"
+      }
+    ],
+    "prettier/prettier": [
+      "error",
+      {
+        "semi": true,
+        "singleQuote": false,
+        "printWidth": 100,
+        "tabWidth": 2,
+        "trailingComma": "es5"
+      }
+    ],
+    "react/jsx-uses-react": "off", // Next.js with React 17+ (no need to import React for JSX)
+    "react/react-in-jsx-scope": "off", // same as above
+    "no-undef": "error" // 🚨 undefined variables like `useState`
+  }
+}
