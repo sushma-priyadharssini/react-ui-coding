@@ -1,4 +1,58 @@
+.container {
+  width: 100%;
+}
+
 .inputContainer {
+  width: 100%;
   display: flex;
-  gap: 10px;
+  padding: 20px;
+  align-items: center;
+}
+
+.inputTextbox {
+  width: 60%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid darkgray;
+}
+
+.addBtn {
+  margin-left: 10px;
+  width: 80px;
+  height: 30px;
+  border-radius: 3px;
+  border: 1px solid darkgray;
+  background-color: #6382c6;
+  color: white;
+}
+
+.deleteButton {
+  width: 80px;
+  height: 25px;
+  border-radius: 3px;
+  border: 1px solid darkgray;
+  color: white;
+  background-color: #e02222;
+}
+
+.itemCard {
+  display: flex;
+  margin: 10px;
+  align-items: center;
+  color: white;
+}
+
+.selected {
+  background-color: #2563eb;
+}
+
+.unselected {
+  background-color: lightslategrey;
+}
+
+.itemHolder {
+  width: 80%;
+  height: 24px;
+  border: 1px solid black;
+  margin-right: 10px;
 }

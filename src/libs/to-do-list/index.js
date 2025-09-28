@@ -1,1 +1,1 @@
-export { default } from "./to-do-list";
+export { default } from "./components/to-do-list";
