@@ -17,26 +17,28 @@ const PollWidget = () => {
             json: () => Promise.resolve(POLLS),
         });
 
-        // Override fetch temporarily
-        const originalFetch = global.fetch;
-        global.fetch = mockFetch;
+        // // Override fetch temporarily
+        // const originalFetch = global.fetch;
+        // global.fetch = mockFetch;
 
         // Call fetch
-        fetch("/api/user")
+        mockFetch()
             .then((res) => res.json())
             .then((data) => {
                 setPollData(data)
             });
 
         // Restore original fetch when component unmounts
-        return () => {
-            global.fetch = originalFetch;
-        };
+        // return () => {
+        //     global.fetch = originalFetch;
+        // };
     }, [])
 
 
     const onSelectOptionHandler = (selectedId) => {
-        setSelectedOptions([...selectedOptions, selectedId])
+        setSelectedOptions(selectedOptions.includes(selectedId) ?
+            selectedOptions.filter(s => s !== selectedId)
+            : [...selectedOptions, selectedId])
     }
 
     const submitHandler = () => {
