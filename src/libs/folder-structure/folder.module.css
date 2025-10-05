@@ -1,0 +1,13 @@
+.accordionIcon {
+  border: solid currentcolor;
+  border-width: 0 2px 2px 0;
+  display: inline-block;
+  height: 8px;
+  transform: translateY(-2px) rotate(45deg);
+  width: 8px;
+  cursor: pointer;
+}
+
+.accordionIconFlipped {
+  transform: translateY(2px) rotate(-135deg);
+}
