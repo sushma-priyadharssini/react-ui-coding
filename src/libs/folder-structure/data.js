@@ -1,5 +1,7 @@
 const items = [
     { id: 1, name: "item1", parentId: null },
+    { id: 5, name: "item5", parentId: null },
+    { id: 6, name: "item6", parentId: 5 },
     { id: 2, name: "item2", parentId: 1 },
     { id: 3, name: "item3", parentId: 1 },
     { id: 4, name: "item4", parentId: 2 },

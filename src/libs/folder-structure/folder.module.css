@@ -1,3 +1,12 @@
+.itemContainer {
+  display: flex;
+  padding: 4px;
+}
+
+.iconContainer {
+  padding-right: 8px;
+}
+
 .accordionIcon {
   border: solid currentcolor;
   border-width: 0 2px 2px 0;

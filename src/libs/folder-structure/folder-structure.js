@@ -9,16 +9,21 @@ function Folder({ data }) {
   return (
     <div>
       <div onClick={() => setExpand(!expand)}>
-        {data.children.length > 0 && <span
-          aria-hidden={true}
-          className={`${styles.accordionIcon} ${expand ? styles.accordionIconFlipped : ""}`}
-        />
-        }
-        <span> {data.name} </span>
+        <div className={styles.itemContainer}>
+          {data.children.length > 0 && <div className={styles.iconContainer}>
+            <span
+              aria-hidden={true}
+              className={`${styles.accordionIcon} ${expand ? styles.accordionIconFlipped : ""}`}
+            />
+          </div>
+          }
+          <span> {data.name} </span>
+        </div>
+
       </div>
       {data.children && (
         <div
-          style={{ display: expand ? "block" : "none", paddingLeft: "10px" }}
+          style={{ display: expand ? "block" : "none", paddingLeft: "20px" }}
         >
           {data.children.map((i) => {
             return <Folder key={i.name} data={i} />;
