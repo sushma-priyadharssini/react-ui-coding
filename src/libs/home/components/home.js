@@ -16,15 +16,20 @@ const Home = () => {
     } } = useAppContext();
 
     useEffect(() => {
-        const timer = setTimeout(() => {
-            const matchResults = ROUTES.filter(r =>
-                r.name.toLocaleLowerCase().includes(searchValue.toLocaleLowerCase()));
-            setProjectList(matchResults);
-            setPage({
-                currPage: 1,
-                endPage: Math.ceil(matchResults.length / ITEMS_PER_PAGE)
-            })
-        }, 300)
+        let timer;
+        if (searchValue.trim() === "") {
+            setProjectList(ROUTES);
+        } else {
+            timer = setTimeout(() => {
+                const matchResults = ROUTES.filter(r =>
+                    r.name.toLocaleLowerCase().includes(searchValue.toLocaleLowerCase()));
+                setProjectList(matchResults);
+                setPage({
+                    currPage: 1,
+                    endPage: Math.ceil(matchResults.length / ITEMS_PER_PAGE)
+                })
+            }, 300)
+        }
         return () => clearTimeout(timer)
     }, [searchValue])
 
