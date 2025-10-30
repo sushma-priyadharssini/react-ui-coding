@@ -48,7 +48,14 @@ const Home = () => {
         </div>
 
         <div className={styles.homeContent}>
-            <ProjectList projects={projectList} />
+            {projectList.length ? <ProjectList projects={projectList} /> :
+                <div
+                    className={styles.noProjectFound}
+                >
+                    <img src='/search-not-found.jpg' width="300px" height="250px" alt="img"></img>
+                    <div>No projects found</div>
+
+                </div>}
         </div>
 
         <Footer projects={projectList} />

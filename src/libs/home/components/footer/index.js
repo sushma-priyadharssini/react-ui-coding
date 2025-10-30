@@ -44,7 +44,7 @@ const Footer = ({ projects }) => {
     const pages = Array.from({ length: page.endPage });
 
     return <footer className={styles.footer}>
-        <div className={styles.pagination}>
+        {!!projects.length && <div className={styles.pagination}>
 
             <button
                 onClick={onPrevious}
@@ -65,7 +65,7 @@ const Footer = ({ projects }) => {
                 disabled={page.currPage === page.endPage}>
                 <FiArrowRight />
             </button>
-        </div>
+        </div>}
     </footer>;
 }
 

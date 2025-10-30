@@ -1,5 +1,5 @@
 .header {
-  margin-bottom: 24px;
+  margin-bottom: 18px;
   display: flex;
   justify-content: center;
 }
@@ -21,8 +21,8 @@
   display: flex;
   justify-content: flex-end;
   width: 100%;
-  padding: 16px 0px;
-  margin-bottom: 16px;
+  padding: 16px 12px;
+  /* margin-bottom: 16px; */
 }
 
 .searchbar {
@@ -31,4 +31,14 @@
   border: 1px solid #ccc;
   border-radius: 5px;
   padding: 8px;
+}
+
+.noProjectFound {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #666;
+  font-size: 1.2rem;
+  height: 500px;
 }
