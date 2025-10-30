@@ -1,5 +1,5 @@
 .header {
-  margin-bottom: 64px;
+  margin-bottom: 24px;
   display: flex;
   justify-content: center;
 }
@@ -13,6 +13,22 @@
   width: 100%;
   display: flex;
   flex-direction: column;
-  align-items: center;  
+  align-items: center;
   justify-content: center;
+}
+
+.navbar {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  padding: 16px 0px;
+  margin-bottom: 16px;
+}
+
+.searchbar {
+  width: 320px;
+  height: 36px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 8px;
 }

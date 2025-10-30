@@ -13,7 +13,7 @@ const Footer = () => {
 
     useEffect(() => {
         setPage({
-            currPage: 1,
+            ...page,
             endPage: Math.ceil(ROUTES.length / ITEMS_PER_PAGE)
         })
     }, [])

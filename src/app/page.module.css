@@ -26,10 +26,9 @@
 }
 
 .main {
-  display: flex;
-  flex-direction: column;
-
-  grid-row-start: 2;
+  /* display: flex;
+  flex-direction: column; */
+  height: 100%;
 }
 
 .main ol {
