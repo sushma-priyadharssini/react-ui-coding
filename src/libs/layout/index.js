@@ -9,7 +9,8 @@ import { ROUTES } from "@/libs/home"
 const Layout = ({ children }) => {
     const { app: { currentProject } } = useAppContext();
     const router = useRouter();
-    const pageTitle = currentProject || ROUTES.find(r => r.path.includes(usePathname())).name;
+    const pathName = usePathname()
+    const pageTitle = currentProject || ROUTES.find(r => r.path.includes(pathName)).name;
 
     return <div>
         <header className={styles.header}>
