@@ -6,11 +6,11 @@ import { ITEMS_PER_PAGE } from "../constants";
 import { useAppContext } from "@/libs/app-context";
 
 
-export const ProjectList = () => {
+export const ProjectList = ({ projects }) => {
     const { pagination: { page } } = useAppContext();
     const startIndex = (page.currPage - 1) * ITEMS_PER_PAGE;
-    const endIndex = Math.min(startIndex + ITEMS_PER_PAGE, ROUTES.length);
-    const filteredPages = ROUTES.slice(startIndex, endIndex);
+    const endIndex = Math.min(startIndex + ITEMS_PER_PAGE, projects.length);
+    const filteredPages = projects.slice(startIndex, endIndex);
 
     return <nav className={styles.projectList}>
         <ul className={styles.gridContainer}>

@@ -3,10 +3,30 @@
 import { ProjectList } from "./project-list"
 import styles from "../home.module.css"
 import Footer from "./footer"
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { ROUTES } from "../routes";
+import { useAppContext } from "@/libs/app-context";
+import { ITEMS_PER_PAGE } from "./constants";
 
 const Home = () => {
     const [searchValue, setSearchValue] = useState("");
+    const [projectList, setProjectList] = useState(ROUTES);
+    const { dispatchers: {
+        setPage
+    } } = useAppContext();
+
+    useEffect(() => {
+        const timer = setTimeout(() => {
+            const matchResults = ROUTES.filter(r =>
+                r.name.toLocaleLowerCase().includes(searchValue.toLocaleLowerCase()));
+            setProjectList(matchResults);
+            setPage({
+                currPage: 1,
+                endPage: Math.ceil(matchResults.length / ITEMS_PER_PAGE)
+            })
+        }, 300)
+        return () => clearTimeout(timer)
+    }, [searchValue])
 
     return <div className={styles.home}>
         <div className={styles.header}>
@@ -23,10 +43,10 @@ const Home = () => {
         </div>
 
         <div className={styles.homeContent}>
-            <ProjectList />
+            <ProjectList projects={projectList} />
         </div>
 
-        <Footer />
+        <Footer projects={projectList} />
     </div>
 }
 export default Home

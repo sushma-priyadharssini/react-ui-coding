@@ -6,7 +6,7 @@ import { useEffect } from "react";
 import { ITEMS_PER_PAGE } from "../constants";
 
 
-const Footer = () => {
+const Footer = ({ projects }) => {
     const { pagination: { page }, dispatchers: {
         setPage
     } } = useAppContext();
@@ -14,29 +14,29 @@ const Footer = () => {
     useEffect(() => {
         setPage({
             ...page,
-            endPage: Math.ceil(ROUTES.length / ITEMS_PER_PAGE)
+            endPage: Math.ceil(projects.length / ITEMS_PER_PAGE)
         })
-    }, [])
+    }, [projects])
 
 
     const onPrevious = () => {
         setPage({
             currPage: page.currPage - 1,
-            endPage: Math.ceil(ROUTES.length / ITEMS_PER_PAGE)
+            endPage: Math.ceil(projects.length / ITEMS_PER_PAGE)
         })
         // setPage(p => ({ ...p, currPage: p.currPage - 1 }))
     }
     const onNext = () => {
         setPage({
             currPage: page.currPage + 1,
-            endPage: Math.ceil(ROUTES.length / ITEMS_PER_PAGE)
+            endPage: Math.ceil(projects.length / ITEMS_PER_PAGE)
         })
         // setPage(p => ({ ...p, currPage: p.currPage + 1 }))
     }
     const onPageButtonClick = (pageNum) => {
         setPage({
             currPage: pageNum,
-            endPage: Math.ceil(ROUTES.length / ITEMS_PER_PAGE)
+            endPage: Math.ceil(projects.length / ITEMS_PER_PAGE)
         })
         // setPage(p => ({ ...p, currPage: pageNum }))
     }
