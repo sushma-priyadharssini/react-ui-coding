@@ -7,8 +7,8 @@ import { useAppContext } from "@/libs/app-context";
 
 
 export const ProjectList = ({ projects }) => {
-    const { pagination: { page } } = useAppContext();
-    const startIndex = (page.currPage - 1) * ITEMS_PER_PAGE;
+    const { pagination: { currentPage } } = useAppContext();
+    const startIndex = (currentPage - 1) * ITEMS_PER_PAGE;
     const endIndex = Math.min(startIndex + ITEMS_PER_PAGE, projects.length);
     const filteredPages = projects.slice(startIndex, endIndex);
 

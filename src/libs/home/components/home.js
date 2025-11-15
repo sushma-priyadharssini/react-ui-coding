@@ -12,7 +12,7 @@ const Home = () => {
     const [searchValue, setSearchValue] = useState("");
     const [projectList, setProjectList] = useState(ROUTES);
     const { dispatchers: {
-        setPage
+        setCurrentPage
     } } = useAppContext();
 
     useEffect(() => {
@@ -24,10 +24,7 @@ const Home = () => {
                 const matchResults = ROUTES.filter(r =>
                     r.name.toLocaleLowerCase().includes(searchValue.toLocaleLowerCase()));
                 setProjectList(matchResults);
-                setPage({
-                    currPage: 1,
-                    endPage: Math.ceil(matchResults.length / ITEMS_PER_PAGE)
-                })
+                setCurrentPage(1)
             }, 300)
         }
         return () => clearTimeout(timer)

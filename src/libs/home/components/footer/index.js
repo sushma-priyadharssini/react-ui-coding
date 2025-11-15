@@ -7,62 +7,34 @@ import { ITEMS_PER_PAGE } from "../constants";
 
 
 const Footer = ({ projects }) => {
-    const { pagination: { page }, dispatchers: {
-        setPage
+    const { pagination: { currentPage }, dispatchers: {
+        setCurrentPage,
+        goToNextPage,
+        goToPrevPage
     } } = useAppContext();
-
-    useEffect(() => {
-        setPage({
-            ...page,
-            endPage: Math.ceil(projects.length / ITEMS_PER_PAGE)
-        })
-    }, [projects])
-
-
-    const onPrevious = () => {
-        setPage({
-            currPage: page.currPage - 1,
-            endPage: Math.ceil(projects.length / ITEMS_PER_PAGE)
-        })
-        // setPage(p => ({ ...p, currPage: p.currPage - 1 }))
-    }
-    const onNext = () => {
-        setPage({
-            currPage: page.currPage + 1,
-            endPage: Math.ceil(projects.length / ITEMS_PER_PAGE)
-        })
-        // setPage(p => ({ ...p, currPage: p.currPage + 1 }))
-    }
-    const onPageButtonClick = (pageNum) => {
-        setPage({
-            currPage: pageNum,
-            endPage: Math.ceil(projects.length / ITEMS_PER_PAGE)
-        })
-        // setPage(p => ({ ...p, currPage: pageNum }))
-    }
-
-    const pages = Array.from({ length: page.endPage });
+    const endPage = Math.ceil(projects.length / ITEMS_PER_PAGE)
+    const pages = Array.from({ length: endPage });
 
     return <footer className={styles.footer}>
         {!!projects.length && <div className={styles.pagination}>
 
             <button
-                onClick={onPrevious}
-                disabled={page.currPage === 1}>
+                onClick={goToPrevPage}
+                disabled={currentPage === 1}>
                 <FiArrowLeft />
             </button>
 
             {pages.map((_, index) => (
                 <button key={index}
-                    className={`${page.currPage === index + 1 ? styles.activePageButton : ""}`}
-                    onClick={() => onPageButtonClick(index + 1)}>
+                    className={`${currentPage === index + 1 ? styles.activePageButton : ""}`}
+                    onClick={() => setCurrentPage(index + 1)}>
                     {index + 1}
                 </button>
             ))}
 
             <button
-                onClick={onNext}
-                disabled={page.currPage === page.endPage}>
+                onClick={goToNextPage}
+                disabled={currentPage === endPage}>
                 <FiArrowRight />
             </button>
         </div>}

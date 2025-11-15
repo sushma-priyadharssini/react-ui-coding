@@ -7,12 +7,35 @@
 
 .projectList {
   margin-bottom: 24px;
-  height: calc(100vh - 260px);
-  overflow-y: auto;
+  height: calc(100vh - 275px);
+  width: 100%;
+  overflow: auto;
   padding: 12px;
+  /* width: calc(100% - 24px); */
 }
 
 /* sm:grid-cols-2 (≥640px) */
+/* @media (min-width: 640px) {
+  .gridContainer {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .projectList {
+    margin-bottom: 12px;
+  }
+} */
+
+/* lg:grid-cols-3 (≥1024px) */
+/* @media (min-width: 1024px) {
+  .gridContainer {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .projectList {
+    margin-bottom: 12px;
+  }
+} */
+
+/*  ---------------- */
+/* sm: 2 items per row (≥640px) */
 @media (min-width: 640px) {
   .gridContainer {
     grid-template-columns: repeat(2, 1fr);
@@ -22,8 +45,18 @@
   }
 }
 
-/* lg:grid-cols-3 (≥1024px) */
-@media (min-width: 1024px) {
+/* md: 3 items per row (≥768px) */
+@media (min-width: 1065px) {
+  .gridContainer {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .projectList {
+    margin-bottom: 12px;
+  }
+}
+
+/* lg: 4 items per row (≥1024px) */
+@media (min-width: 1540px) {
   .gridContainer {
     grid-template-columns: repeat(4, 1fr);
   }
@@ -31,6 +64,13 @@
     margin-bottom: 12px;
   }
 }
+
+/* Optional XL breakpoint (≥1280px): 5 items per row if you want */
+/* @media (min-width: 1280px) {
+  .gridContainer {
+    grid-template-columns: repeat(5, 1fr);
+  }
+} */
 
 .homeContent {
   display: flex;

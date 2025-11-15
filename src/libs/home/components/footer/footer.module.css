@@ -6,7 +6,7 @@
   padding: 16px 0;
   border-top: 1px solid #e5e7eb;
   margin-top: 24px;
-  width: 100%
+  width: 100%;
 }
 
 .pagination > button {
@@ -49,8 +49,8 @@
 /* sm:grid-cols-2 (≥640px) */
 @media (min-width: 640px) {
   .footer {
-    width: calc(100% - 80px);
-    left: 40px;
+    /* width: calc(100% - 80px); */
+    /* left: 40px; */
     padding-bottom: 24px;
   }
 }

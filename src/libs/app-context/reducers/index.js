@@ -3,10 +3,7 @@ import { app } from "./app";
 
 export const initialState = {
     pagination: {
-        page: {
-            currPage: 1,
-            endPage: 1
-        }
+        currentPage: 1
     },
     app: {
         currentProject: null

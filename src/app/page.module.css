@@ -33,6 +33,7 @@
   background: #f4f4f4;
   padding: 1rem; */
   min-height: calc(100vh - 80px);
+  width: calc(100vw - 80px);
 }
 
 /* .main ol {

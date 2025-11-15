@@ -2,7 +2,7 @@
 
 import { createContext, useReducer, useContext } from "react";
 import { rootReducer, initialState } from "./reducers";
-import { setPage } from "./actions/pagination";
+import { goToNextPage, goToPrevPage, setCurrentPage } from "./actions/pagination";
 import { setCurrentProject } from "./actions/app";
 
 const AppContext = createContext(null)
@@ -12,7 +12,9 @@ export const AppContextProvider = ({ children }) => {
     const [state, dispatch] = useReducer(rootReducer, initialState);
 
     const dispatchers = {
-        setPage: setPage(dispatch),
+        setCurrentPage: setCurrentPage(dispatch),
+        goToNextPage: goToNextPage(dispatch),
+        goToPrevPage: goToPrevPage(dispatch),
         setCurrentProject: setCurrentProject(dispatch)
     }
 
