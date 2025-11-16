@@ -7,13 +7,17 @@ export default function Animation() {
     const boxRef = useRef(null);
     const pos = useRef(0);
 
+    const getViewportWidth = () =>
+        (window.visualViewport && window.visualViewport.width) || window.innerWidth;
+
     useEffect(() => {
         let frameId;
 
         const animate = () => {
             pos.current += 2;
             // boxRef.current.style.transform = `translateX(${pos.current}px)`;
-            if (pos.current > window.innerWidth) {
+
+            if (pos.current > getViewportWidth() - 50) {
                 pos.current = -BOX_WIDTH;
             }
             if (boxRef.current) {
