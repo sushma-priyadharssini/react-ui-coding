@@ -1,6 +1,10 @@
 .box {
-  height: 70px;
-  width: 70px;
+  height: 100px;
+  width: 100px;
   border: 1px solid black;
   text-align: center;
+}
+
+.table {
+  width: 300px;
 }

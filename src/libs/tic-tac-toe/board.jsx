@@ -1,5 +1,5 @@
 "use client";
-import { box } from "./board.module.css";
+import { box, table } from "./board.module.css";
 import { SUCCESS_COMBINATION } from "./constants";
 import { useState, useEffect } from "react";
 
@@ -51,7 +51,7 @@ const TicTacToe = () => {
   return (
     <>
       {winner && <span>{`${winner} has won`}</span>}
-      <table>
+      <table className={table}>
         <tbody>
           {Array.from({ length: 3 }, () => 0).map((_, i) => {
             return (
