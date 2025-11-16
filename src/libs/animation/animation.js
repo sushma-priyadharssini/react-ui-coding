@@ -1,6 +1,8 @@
 "use client";
 import { useEffect, useRef } from "react";
 
+const BOX_WIDTH = 50
+
 export default function Animation() {
     const boxRef = useRef(null);
     const pos = useRef(0);
@@ -11,6 +13,9 @@ export default function Animation() {
         const animate = () => {
             pos.current += 2;
             // boxRef.current.style.transform = `translateX(${pos.current}px)`;
+            if (pos.current > window.innerWidth) {
+                pos.current = -BOX_WIDTH;
+            }
             if (boxRef.current) {
                 boxRef.current.style.left = pos.current + 'px';
             }
@@ -23,6 +28,10 @@ export default function Animation() {
     }, []);
 
     return <div ref={boxRef} style={{
-        width: 50, height: 50, background: 'coral', position: 'absolute'
+        width: BOX_WIDTH,
+        height: BOX_WIDTH,
+        background: 'coral',
+        position: 'absolute',
+        left: 0
     }} />;
 }
