@@ -65,7 +65,7 @@ export default function InfiniteScrollPage() {
             style={{
                 height: "400px",
                 border: "2px solid #ccc",
-                width: "50vw",
+                width: "70vw",
                 overflowY: "auto",
                 padding: "20px",
                 position: "relative",
