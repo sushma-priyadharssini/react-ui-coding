@@ -44,6 +44,7 @@ const OtpInput = () => {
                 }}
                 type="text"
                 // maxLength={1}
+                inputMode="numeric"
                 key={index}
                 className={styles.box}
                 value={inputArr[index]}
