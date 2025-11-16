@@ -1,0 +1,13 @@
+.box {
+  height: 50px;
+  width: 50px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  text-align: center;
+  text-emphasis-style: bold;
+}
+
+.inputContainer {
+  display: flex;
+  gap: 10px;
+}

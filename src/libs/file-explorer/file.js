@@ -33,8 +33,8 @@ export function FileObject({
 
                     setExpanded(!expanded);
                 }}>
-                <span>{fileName}</span>{' '}
-                {isDirectory && <>[{expanded ? '-' : '+'}]</>}
+                {isDirectory && <span>{expanded ? '⌃' : '⌄'}</span>}
+                <span>{fileName}</span>
             </button>
             {fileChildren &&
                 fileChildren.length > 0 &&

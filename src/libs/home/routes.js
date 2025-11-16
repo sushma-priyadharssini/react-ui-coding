@@ -16,4 +16,6 @@ export const ROUTES = [
     { name: 'Infinite Scroll', path: '/projects/infinite-scroll', description: "A seamless content-loading feature that automatically fetches and displays more items as you scroll down.", github: "https://github.com/sushma-priyadharssini/react-ui-coding/blob/main/src/libs/infinite-scroll/infinite-scroll-page.js" },
     { name: 'Virtualized List', path: '/projects/virtualized-list', description: "A performance-optimized list that renders only visible items on screen, ensuring smooth scrolling even with large data sets.", github: "https://github.com/sushma-priyadharssini/react-ui-coding/blob/main/src/libs/virtualized-list/virtualized-list.js" },
     { name: 'Box Animation', path: '/projects/animation', description: "An animation that smoothly moves a box across the screen using the browser’s optimized requestAnimationFrame loop.", github: "https://github.com/sushma-priyadharssini/react-ui-coding/blob/main/src/libs/animation/animation.js" },
+    { name: 'OTP Input', path: '/projects/otp-input', description: "An input interface that lets users enter one-time passwords through neatly separated, auto-advancing digit boxes.", github: "https://github.com/sushma-priyadharssini/react-ui-coding/blob/main/src/libs/otp-input/otp-input.js" },
+
 ]
