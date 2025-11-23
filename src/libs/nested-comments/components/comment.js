@@ -59,7 +59,7 @@ const Comment = ({
         {!editMode ? (
             <>
                 <p className="comment-content">{comment.content}</p>
-                <p className="comment-info">Votes: {comment.votes}</p>
+                <p className="comment-info">Likes: {comment.votes}</p>
                 <p className="comment-info" suppressHydrationWarning>
                     {new Date(comment.timestamp).toLocaleString("en-US", { timeZone: "UTC" })}
                 </p>
