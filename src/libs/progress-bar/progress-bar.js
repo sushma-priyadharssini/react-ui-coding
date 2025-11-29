@@ -1,15 +1,19 @@
 "use client";
 import ProgressBarOne from "./progress-bar-one";
 import ProgressBarTwo from "./progress-bar-two";
+import ProgressBarThree from "./progress-bar-three"
 
 const ProgressBar = () => {
 
     return <>
-        <div>{"Progress Bar 1"}</div>
+        <h3>{"Progress Bar 1"}</h3>
         <ProgressBarOne />
 
-        <div>{"Progress Bar 2"}</div>
+        <h3>{"Progress Bar 2"}</h3>
         <ProgressBarTwo />
+
+        <h3>{"Progress Bar 3"}</h3>
+        <ProgressBarThree />
     </>
 }
 

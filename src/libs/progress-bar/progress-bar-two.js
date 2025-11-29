@@ -2,6 +2,9 @@
 import styles from "./progress-bar.module.css";
 import { useState, useEffect } from 'react';
 
+const PERCENTAGE = 100;
+const PROGRESS_DURATION = 5000;
+
 function ProgressBar() {
     const [startTransition, setStartTransition] = useState(false);
 
@@ -13,7 +16,11 @@ function ProgressBar() {
     }, [])
 
     return (
-        <div className={`${styles.progressTransition} ${startTransition && styles.progressFilled}`}>
+        <div className={`${styles.progressTransition} ${startTransition && styles.progressFilled}`}
+            style={{
+                width: startTransition ? `${PERCENTAGE}%` : "0%",
+                transition: `width ${PROGRESS_DURATION}ms linear`
+            }}>
         </div>
     )
 }
@@ -27,6 +34,9 @@ const ProgressBarTwo = () => {
 
     return (
         <div className={styles.progressContainer}>
+            <div className={styles.actionContainer}>
+                <button className={styles.addButton} onClick={addHandler}>Add</button>
+            </div>
             {Array(bars).fill(null).map((_, id) => {
                 return (
                     <div className={styles.barContainer} key={id}>
@@ -34,7 +44,6 @@ const ProgressBarTwo = () => {
                     </div>
                 )
             })}
-            <button onClick={addHandler}>Add</button>
         </div>
     );
 

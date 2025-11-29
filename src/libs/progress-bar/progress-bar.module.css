@@ -8,7 +8,7 @@
 }
 
 .completed {
-  background-color: #0d6efd;
+  background-color: blue;
   height: 100%;
   text-align: center;
   color: white;
@@ -29,7 +29,7 @@
   height: 10px;
   width: 100%;
   background-color: rgb(233, 236, 239);
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 .progressTransition {
@@ -40,12 +40,25 @@
   transition-duration: 2000ms; */
   /* can also consider width */
   width: 0px;
-  /* transition-property: width; */
+  transition-property: width;
   /* transition-timing-function: linear; */
-  transition: width 2s;
+  /* transition: width 5s; */
 }
 
 .progressFilled {
   /* transform: scaleX(40%); */
-  width: 30%;
+  width: 100%;
+}
+
+.actionContainer {
+  display: flex;
+  gap: 8px;
+}
+
+.addButton {
+  padding: 4px 16px;
+  background-color: blue;
+  color: white;
+  border: none;
+  border-radius: 3px;
 }
